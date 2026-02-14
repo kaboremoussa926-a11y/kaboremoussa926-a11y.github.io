@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Séminaristes - AEEMCI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="mouss.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="c:\Users\TRUST TECHNOLOGY\Pictures\2025-01\IMG_0663.JPG" alt="Logo AEEMCI" class="logo">
+            </div>
+            <div class="header-text">
+                <h1>AEEMCI</h1>
+                <p class="subtitle">Association des Élèves et Étudiants Musulmans de Côte d'Ivoire</p>
+                <p class="secretariat">Secrétariat Régional des Grandes Ponts</p>
+            </div>
+        </header>
+
+        <div class="serefis-banner">
+            <span>SEREFIS-26</span>
+        </div>
+
+        <main class="form-container">
+            <h2><i class="fas fa-user-graduate"></i> Formulaire d'Inscription</h2>
+            
+            <form id="inscriptionForm" class="form">
+                <div class="form-grid">
+                    <!-- Section Informations Personnelles -->
+                    <fieldset class="form-section">
+                        <legend><i class="fas fa-user"></i> Informations Personnelles</legend>
+                        
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="required">*</span></label>
+                            <input type="text" id="nom" name="nom" required>
+                            <div class="error-message" id="nom-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input type="text" id="prenom" name="prenom" required>
+                            <div class="error-message" id="prenom-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date_naissance">Date de naissance <span class="required">*</span></label>
+                            <input type="date" id="date_naissance" name="date_naissance" required>
+                            <div class="error-message" id="date_naissance-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Genre <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="homme" name="genre" value="homme" required>
+                                    <label for="homme"><i class="fas fa-male"></i> Homme</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="femme" name="genre" value="femme">
+                                    <label for="femme"><i class="fas fa-female"></i> Femme</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="genre-error"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section Formation -->
+                    <fieldset class="form-section">
+                        <legend><i class="fas fa-graduation-cap"></i> Formation</legend>
+                        
+                        <div class="form-group">
+                            <label for="niveau_etudes">Niveau d'études <span class="required">*</span></label>
+                            <select id="niveau_etudes" name="niveau_etudes" required>
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="bac">Baccalauréat</option>
+                                <option value="licence">Licence</option>
+                                <option value="master">Master</option>
+                                <option value="doctorat">Doctorat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <div class="error-message" id="niveau_etudes-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ville">Ville d'origine <span class="required">*</span></label>
+                            <select id="ville" name="ville" required>
+                                <option value="">-- Sélectionnez votre ville --</option>
+                                <option value="Dabou">Dabou</option>
+                                <option value="Sikensi">Sikensi</option>
+                                <option value="Jacqueville">Jacqueville</option>
+                                <option value="N'douci">N'douci</option>
+                                <option value="Grande-Lahou">Grande-Lahou</option>
+                                <option value="Tiassalé">Tiassalé</option>
+                            </select>
+                            <div class="error-message" id="ville-error"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section Contacts -->
+                    <fieldset class="form-section">
+                        <legend><i class="fas fa-address-book"></i> Contacts</legend>
+                        
+                        <div class="form-group">
+                            <label for="telephone">Numéro de téléphone <span class="required">*</span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="telephone" name="telephone" placeholder="Ex: 0554384426" required>
+                            </div>
+                            <div class="error-message" id="telephone-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgence">Numéro d'urgence <span class="required">*</span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone-alt"></i>
+                                <input type="tel" id="urgence" name="urgence" placeholder="Ex: 0152429482" required>
+                            </div>
+                            <div class="error-message" id="urgence-error"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section Paiement -->
+                    <fieldset class="form-section">
+                        <legend><i class="fas fa-money-bill-wave"></i> Paiement</legend>
+                        
+                        <div class="form-group">
+                            <label for="paiement">Mode de paiement <span class="required">*</span></label>
+                            <select id="paiement" name="paiement" required>
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="moov">Moov Money</option>
+                                <option value="mtn">MTN Mobile Money</option>
+                                <option value="orange">Orange Money</option>
+                                <option value="wave">Wave</option>
+                            </select>
+                            <div class="error-message" id="paiement-error"></div>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <h3><i class="fas fa-info-circle"></i> Instructions de paiement</h3>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <p><strong>MTN Mobile Money</strong><br>0554384426</p>
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <p><strong>Moov Money</strong><br>0152429482</p>
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <p><strong>Wave</strong><br>0152429482</p>
+                                </div>
+                            </div>
+                            <p class="payment-note"><i class="fas fa-exclamation-circle"></i> Indiquez votre nom complet dans la référence du paiement.</p>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Soumettre l'inscription
+                    </button>
+                    <div class="form-message" id="form-message"></div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023 AEEMCI - Secrétariat Régional des Grandes Ponts</p>
+        <p>SEREFIS-26 | Tous droits réservés</p>
+    </footer>
+
+    <!-- Modal de confirmation -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Inscription réussie !</h3>
+            <p id="modal-message">Votre inscription a été enregistrée avec succès.</p>
+            <button id="modal-close-btn" class="modal-btn">Fermer</button>
+        </div>
+    </div>
+
+    <script src="moi.js"></script>
+</body>
+</html>
